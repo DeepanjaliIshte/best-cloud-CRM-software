@@ -437,7 +437,14 @@ h6 {
   font-size: 40px;
   font-weight: 700;
 }
+#hero a {
+  text-decoration: none;
+}
 
+#hero a:hover {
+  text-decoration: underline;
+  color: #4a148c;
+}
 #hero .intro-info h2 span {
   color: #EF8119;
 }
@@ -473,7 +480,39 @@ h6 {
 }
 
 
+.custom-section,
+.custom-section .row,
+.custom-section .col-lg-6 {
+  overflow: visible !important;
+}
 
+
+/* ===== HERO ZOOM FIX (FINAL) ===== */
+
+/* Never clip hero content */
+/* ===== HERO ZOOM FIX (CLEAN & FINAL) ===== */
+
+/* Hero must grow naturally */
+#hero {
+  height: auto !important;
+  min-height: auto !important;
+  overflow: visible !important;
+
+  /* Adjust ONLY these two values */
+  padding-top: 110px;     /* fixed header height */
+  padding-bottom: 40px;   /* space before next section */
+}
+
+/* Prevent inner clipping */
+#hero .container,
+#hero .row {
+  overflow: visible !important;
+}
+
+/* Small safety spacer (minimal) */
+.hero-spacer {
+  height: 24px;
+}
 /*--------------------------------------------------------------
 # Sections
 --------------------------------------------------------------*/
@@ -2058,3 +2097,8 @@ section.why-crm-section {
   border-radius: 50%; /* perfect circle */
 }
 
+.darkest-violet {
+  color: #2e1a47 !important;   /* dark violet-black */
+  background: none !important;
+  -webkit-text-fill-color: initial !important;
+}
